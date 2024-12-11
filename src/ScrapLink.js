@@ -16,7 +16,7 @@ const ScrapeLink = () => {
         setResult(null);
 
         try {
-            const response = await axios.get(`http://localhost:5000/api/scrape?url=${encodeURIComponent(url)}`);
+            const response = await axios.get(`https://us-central1-ai-tools-6d313.cloudfunctions.net/scrapeTools/api/scrape?url=${encodeURIComponent(url)}`);
             setResult(response.data);
         } catch (err) {
             setError('Failed to scrape the URL. Please try again.');
